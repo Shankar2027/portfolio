@@ -1,11 +1,11 @@
 import HeroImg from "@/assets/images/shankar.jpg";
-import Footer from "@/components/Footer"; // ✅ Import Footer component
-import Skills from "@/pages/Skills/Skills"; // ✅ Import Skills component
+import Footer from "@/components/Footer";
+import Skills from "@/pages/Skills/Skills";
 import React from "react";
-import Experience from "@/pages/Experience/Experience"; // ✅ Import Experience component
-import Projects from "@/pages/Projects/Projects"; // ✅ Import Projects component
-import Education from "@/pages/Education/Education"; // ✅ Import Education component
-import Contact from "@/pages/Contact/Contact"; // ✅ Import Contact component
+import Experience from "@/pages/Experience/Experience";
+import Projects from "@/pages/Projects/Projects";
+import Education from "@/pages/Education/Education";
+import Contact from "@/pages/Contact/Contact";
 
 export default function About() {
   return (
@@ -23,7 +23,7 @@ export default function About() {
                 <img
                   src={HeroImg}
                   className="rounded-[15px] shadow-xl block transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl ring-1 ring-zinc-100/20"
-                  alt="yatish profile"
+                  alt="Shankar Reddy profile"
                   width={1000}
                   height={929}
                 />
@@ -33,25 +33,25 @@ export default function About() {
             {/* Text Section */}
             <div className="relative space-y-4">
               <p className="text-white">
-                👨‍💻 <strong>AI & ML Specialist</strong> | 📊 <strong>Data Analyst</strong> | 🎓 <strong>3rd Year B.Tech Student at SVCET</strong>
+                👨‍💻 <strong>Agentic AI Intern</strong> | 📊 <strong>Data Analyst</strong> | 🎓 <strong>B.Tech 3rd Year at SVCET</strong>
               </p>
               <p className="text-white">
-                Hi, I’m <strong>Shankar Reddy</strong>, a passionate developer driven by the potential of Artificial Intelligence to solve complex real-world problems.
+                Hi, I’m <strong>Shankar Reddy</strong>, a computer science student specializing in <strong>AI & ML</strong>. I am driven by the potential of intelligent systems to solve complex, real-world problems.
               </p>
               <p className="text-white">
-                My core expertise lies in <strong>Artificial Intelligence</strong> and <strong>Machine Learning (ML)</strong>. I enjoy working with large datasets to uncover trends and building intelligent applications using <strong>Generative AI</strong>
+                My core expertise lies in <strong>Machine Learning</strong> and <strong>Natural Language Processing (NLP)</strong>. I enjoy building applications that leverage <strong>Generative AI</strong> and <strong>Deep Learning</strong> to turn massive datasets into actionable intelligence.
               </p>
               <p className="text-white">
-                ✍️ Beyond the code, I am deeply interested in <strong>Public Health Tech</strong> and <strong>Agricultural AI</strong>, finding ways to use technology for social good.<br />
-                I am also a Full-Stack enthusiast, comfortable building robust web apps with <strong>React</strong> and deploying them on the cloud.
+                ✍️ Beyond the code, I am passionate about <strong>Public Health Tech</strong> (like my Aarogya-AI project) and finding ways to use technology for social good. 
+                I am also a Full-Stack enthusiast, comfortable building web apps.
               </p>
               <p className="text-white">
-                I’m constantly seeking opportunities to learn, grow, and contribute to the AI revolution.
+                Currently, I am expanding my horizons as an <strong>Agentic AI Intern</strong> at Innomatics Research Labs, focusing on Python and cloud-based AI solutions.
               </p>
 
               <div className="pt-6">
                 <blockquote className="border-l-4 border-gray-300 pl-4">
-                  <p className="text-white">
+                  <p className="text-white italic">
                     "Turning raw data into actionable insights and ideas into intelligent reality."
                   </p>
                 </blockquote>
@@ -59,13 +59,13 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/* ✅ Footer Section */}
+
+        {/* Component Sections */}
         <Skills />
         <Experience />
         <Projects />
         <Education />
         <Contact />
-
         <Footer />
       </section>
     </>

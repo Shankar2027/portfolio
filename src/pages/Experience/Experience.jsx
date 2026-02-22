@@ -76,20 +76,20 @@ const ExperienceCard = ({ title, company, period, description, icon: Icon }) => 
 const ExperienceSection = () => {
   const experiences = [
     {
+      icon: Layers,
+      title: "Agentic Ai Intern",
+      company: "Innomatics Research Labs",
+      period: "FEB - APR 2026",
+      description:
+        "Agentic AI Intern | Innomatics Research Labs.Developing AI solutions using Python, FastAPI, and AWS.Building advanced workflows with LangChain and LangGraph for Agentic AI applications."
+    },
+    {
       icon: Network,
       title: "DATA ANALYST",
       company: "Apex Planet Pvt Ltd",
-      period: "Jan - Mar 2026",
+      period: "JAN - MAR 2026",
       description:
         "Hands-on experience in Explotatory Data Analysis, Data Visualization , machine learning, and real-time applications through a certified internship.",
-    },
-    {
-      icon: Layers,
-      title: "Data Analytics Job Simulation",
-      company: "Deloitte",
-      period: "NOV - Dec 2025",
-      description:
-        "Built a real-time live Dashboards using Power Bi , Excel.",
     },
     
   ];

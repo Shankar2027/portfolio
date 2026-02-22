@@ -109,7 +109,6 @@ const SkillsSection = () => {
       skills: [
         { name: "Python", icon: <FaPython className="w-4 h-4 text-[#3776AB]" /> },
         { name: "SQL", icon: <SiMysql className="w-4 h-4 text-[#00758F]" /> },
-        { name: "Java", icon: <FaJava className="w-4 h-4 text-[#007396]" /> },
         { name: "HTML", icon: <FaHtml5 className="w-4 h-4 text-[#E34F26]" /> }, // Fixed
         { name: "CSS", icon: <FaCss3Alt className="w-4 h-4 text-[#1572B6]" /> }, // Fixed
         { name: "JavaScript", icon: <FaJs className="w-4 h-4 text-[#F7DF1E]" /> }, // Fixed
@@ -175,14 +174,14 @@ const SkillsSection = () => {
         { name: "Problem Solving", icon: <FaPuzzlePiece className="w-4 h-4 text-yellow-400" /> },
         { name: "Listening to Music", icon: <FaHeadphones className="w-4 h-4 text-pink-300" /> },
         { name: "Exploring New Tech", icon: <FaSearch className="w-4 h-4 text-blue-300" /> },
-        { name: "Watching Web Series", icon: <MdLiveTv className="w-4 h-4 text-red-300" /> },
+        { name: "Logic Puzzles", icon: <FaPuzzlePiece className="w-4 h-4 text-amber-400" /> },
         { name: "Hackathons", icon: <FaLaptopCode className="w-4 h-4 text-orange-400" /> },
         { name: "Helping Others", icon: <FaHandsHelping className="w-4 h-4 text-indigo-300" /> },
         { name: "Carrom", icon: <FaGamepad className="w-4 h-4 text-gray-300" /> },
         { name: "Badminton", icon: <MdSportsTennis className="w-4 h-4 text-lime-400" /> },
         { name: "Traveling", icon: <FaPlane className="w-4 h-4 text-teal-400" /> },
-        { name: "Logic Puzzles", icon: <FaPuzzlePiece className="w-4 h-4 text-amber-400" /> },
-        { name: "Photography", icon: <FaCameraRetro className="w-4 h-4 text-rose-400" /> },
+        
+
       ],
     },
   ];

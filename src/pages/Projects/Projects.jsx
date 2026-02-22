@@ -5,6 +5,14 @@ import project1Img from "@/assets/images/delinquency.jpg"; // Check your file na
 import project2Img from "@/assets/images/chatbot.jpg";     // Check your file name!
 
 const projects = [
+   {
+    title: "Gen AI Health Assistant",
+    description: "This project implements a Generative AI-powered medical diagnosis assistant tailored for rural healthcare centers and primary health clinics in India. It empowers healthcare workers and doctors to diagnose common diseases by analyzing patient symptoms, medical history, and vital signs, supporting multilingual interaction and offline usage in low-connectivity environments.",
+    img: project2Img,
+    color: "rgb(85, 98, 214)",
+    github: "https://github.com/Shankar007-pro/genai-health-assistant",
+    live: "https://shankar0747-aarogya-ai-v2.hf.space/",
+  },
   {
     title: " Deliquency Prediction",
     description: "Financial institutions face significant losses due to loan defaults. This project focuses on building a robust Data Analytics & Machine Learning Pipeline to predict customer delinquency (failure to pay). The goal was to transform raw, inconsistent financial data into actionable insights and high-quality features for predictive modeling.",
@@ -13,14 +21,7 @@ const projects = [
     github: "https://github.com/Shankar007-pro/Deliquency-Prediction",
     live: "",
   },
-  {
-    title: "Gen AI Health Assistant",
-    description: "This project implements a Generative AI-powered medical diagnosis assistant tailored for rural healthcare centers and primary health clinics in India. It empowers healthcare workers and doctors to diagnose common diseases by analyzing patient symptoms, medical history, and vital signs, supporting multilingual interaction and offline usage in low-connectivity environments.",
-    img: project2Img,
-    color: "#d4cbd4ff",
-    github: "https://github.com/Shankar007-pro/genai-health-assistant",
-    live: "https://shankar0747-aarogya-ai-v2.hf.space/",
-  },
+ 
   
 
 ];

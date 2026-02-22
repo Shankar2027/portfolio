@@ -1,7 +1,4 @@
-import { useState, useEffect } from "react";
-import Prism from "prismjs";
-import "prismjs/components/prism-javascript";
-import "@/assets/css/tomorrow.css";
+import { useEffect } from "react";
 import Meteors from "@/components/ui/meteors";
 import PortfolioPage from "@/pages/About/About";
 import SparklesText from "@/components/ui/sparkles-text";
@@ -42,36 +39,12 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-     "AI & Machine Learning Enthusiast",
+    "AI & Machine Learning Enthusiast",
     "PROBLEM SOLVER | CREATIVE THINKER",
     "Data Analyst",
   ];
 
-  const [code] = useState(`
-const profile = {
-    name: 'MR.SHANKAR',
-    title: 'AI & ML Specialist | Data Analyst | Problem Solver',
-    skills: [
-    'Excel', 'Python', 'Power Bi', 'EDA' ,'Data Visualization','Tableau',
-],
-
-    hardWorker: true,
-    quickLearner: true,
-    problemSolver: true,
-    hireable: function() {
-        return (
-            this.hardWorker &&
-            this.problemSolver &&
-            this.skills.length >= 5 &&
-            this.quickLearner
-        );
-    }
-};
-  `);
-
   useEffect(() => {
-    Prism.highlightAll();
-
     // Add CSS animation for grid and dots
     const style = document.createElement("style");
     style.textContent = `
@@ -128,7 +101,7 @@ const profile = {
       document.head.removeChild(style);
       window.removeEventListener("resize", checkResolution);
     };
-  }, [code]);
+  }, []);
 
   return (
     <>
@@ -139,13 +112,7 @@ const profile = {
         >
           <div className="absolute inset-0"></div>
 
-          {/* Choose one of these background options */}
           <GridBackground />
-
-          {/* Or keep the original backgrounds if you prefer */}
-          {/* <HexagonBackground /> */}
-          {/* <AnimatedGrid /> */}
-          {/* <DotBackground /> */}
 
           {/* Meteors Effect */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -154,23 +121,22 @@ const profile = {
 
           {/* Main content container */}
           <div
-            className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 py-8 md:py-10 lg:py-12 md:pt-28 xl:pt-28"
+            className="container mx-auto flex flex-col lg:flex-row items-center justify-center relative z-10 py-8 md:py-10 lg:py-12 md:pt-28 xl:pt-28"
             style={{
               paddingTop:
                 window.innerWidth >= 1360 &&
-                  window.innerWidth <= 1370 &&
-                  window.innerHeight >= 760 &&
-                  window.innerHeight <= 775
+                window.innerWidth <= 1370 &&
+                window.innerHeight >= 760 &&
+                window.innerHeight <= 775
                   ? "12rem"
                   : "",
             }}
           >
             {/* Left column - Text content */}
-            <div className="w-full lg:w-1/2 mb-12 lg:mb-0 animate__animated animate__fadeInLeft relative">
+            <div className="w-full lg:w-2/3 mb-12 lg:mb-0 animate__animated animate__fadeInLeft relative flex flex-col items-center text-center">
               {/* Decorative blurs */}
               <div className="absolute hidden lg:-top-20 lg:-left-20 lg:block w-48 h-48 lg:w-64 lg:h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-              <div className="absolute hidden lg:block lg:top-40 lg:-right-20 w-48 h-48 lg:w-64 lg:h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
-
+              
               {/* Welcome badge */}
               <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-6 sm:mb-8 animate__animated animate__fadeInDown animate__delay-1s">
                 <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
@@ -215,7 +181,6 @@ const profile = {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
-                {/* View Projects Button */}
                 <a
                   href="https://github.com/Shankar007-pro"
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
@@ -228,11 +193,10 @@ const profile = {
                   </span>
                 </a>
 
-                {/* Contact Button */}
-                 <a
-                 href="/portfolio/shankar.pdf" // 👈 NEW LOCAL LINK (Make sure your file is named resume.pdf inside the public folder)
+                <a
+                  href="/portfolio/shankar.pdf"
                   target="_blank"
-                  rel="noopener noreferrer" // Good practice for security
+                  rel="noopener noreferrer"
                   className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
@@ -242,44 +206,6 @@ const profile = {
                     </span>
                   </span>
                 </a>
-              </div>
-
-              {/* Floating badges */}
-              <div className="hidden lg:block absolute left-[5.5rem] top-[2.3rem] animate-float-slow">
-                <div className="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400">
-                  <i className="fas fa-wand-magic-sparkles"></i>&nbsp;&nbsp;UI
-                  Magic
-                </div>
-              </div>
-              <div className="hidden lg:block absolute right-10 top-20 animate-float">
-                <div className="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400">
-                  <i className="fas fa-code"></i>&nbsp;&nbsp;Clean Code
-                </div>
-              </div>
-              <div className="hidden lg:block absolute top-[17rem] left-[70%] transform -translate-x-1/2 animate-float">
-                <div className="px-4 py-2 rounded-lg bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 text-amber-400">
-                  <i className="fas fa-lightbulb"></i>&nbsp;&nbsp;Innovation
-                </div>
-              </div>
-            </div>
-
-            {/* Right column - Code window */}
-            <div className="w-full lg:w-1/2 animate__animated animate__fadeInDown animate__delay-0.1s">
-              <div className="gradient-border">
-                <div className="code-window bg-[#091121]">
-                  <div className="window-header">
-                    <div className="window-dot bg-red-500"></div>
-                    <div className="window-dot bg-yellow-500"></div>
-                    <div className="window-dot bg-green-500"></div>
-                    <span className="ml-2 text-sm text-gray-400 flex items-center gap-2">
-                      <i className="fas fa-code"></i>
-                      developer.js
-                    </span>
-                  </div>
-                  <pre className="language-javascript">
-                    <code className="language-javascript">{code}</code>
-                  </pre>
-                </div>
               </div>
             </div>
           </div>
