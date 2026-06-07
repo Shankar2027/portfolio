@@ -1,29 +1,22 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-const getContainer = () => {
-  const id = "_coolMode_effect";
-  let existingContainer = document.getElementById(id);
+const getUniqueContainerId = () => {
+  const id = `coolMode_effect_${Math.random().toString(36).substr(2, 9)}`;
+  return id;
+};
 
-  if (existingContainer) {
-    return existingContainer;
-  }
-
+const applyParticleEffect = (element, options) => {
+  const containerId = getUniqueContainerId();
   const container = document.createElement("div");
-  container.setAttribute("id", id);
+  container.setAttribute("id", containerId);
   container.setAttribute(
     "style",
-    "overflow:hidden; position:fixed; height:100%; top:0; left:0; right:0; bottom:0; pointer-events:none; z-index:2147483647"
+    "overflow:hidden; position:fixed; height:100%; top:0; left:0; right:0; bottom:0; pointer-events:none;"
   );
 
   document.body.appendChild(container);
 
-  return container;
-};
-
-let instanceCounter = 0;
-
-const applyParticleEffect = (element, options) => {
-  instanceCounter++;
+  let instanceCounter = 0;
 
   const defaultParticle = "circle";
   const particleType = options?.particle || defaultParticle;
@@ -35,7 +28,7 @@ const applyParticleEffect = (element, options) => {
   let mouseX = 0;
   let mouseY = 0;
 
-  const container = getContainer();
+  const zIndex = 1000 + instanceCounter;
 
   function generateParticle() {
     const size =
@@ -70,6 +63,7 @@ const applyParticleEffect = (element, options) => {
 
     particle.style.position = "absolute";
     particle.style.transform = `translate3d(${left}px, ${top}px, 0px) rotate(${spinVal}deg)`;
+    particle.style.zIndex = zIndex;
 
     container.appendChild(particle);
 
@@ -176,7 +170,8 @@ const applyParticleEffect = (element, options) => {
         cancelAnimationFrame(animationFrame);
         clearInterval(interval);
 
-        if (--instanceCounter === 0) {
+        const container = document.getElementById(containerId);
+        if (container) {
           container.remove();
         }
       }
@@ -186,9 +181,11 @@ const applyParticleEffect = (element, options) => {
 
 export const CoolMode = ({ children, options }) => {
   const ref = useRef(null);
+  const [instanceCounter, setInstanceCounter] = useState(0);
 
   useEffect(() => {
     if (ref.current) {
+      setInstanceCounter(instanceCounter + 1);
       return applyParticleEffect(ref.current, options);
     }
   }, [options]);
