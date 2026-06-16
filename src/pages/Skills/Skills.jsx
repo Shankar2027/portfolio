@@ -108,7 +108,7 @@ const SkillsSection = () => {
       color: "text-blue-400",
       skills: [
         { name: "Python", icon: <FaPython className="w-4 h-4 text-[#3776AB]" /> },
-        { name: "MySQL", icon: <SiMysql className="w-4 h-4 text-[#00758F]" /> },
+        { name: "SQL", icon: <SiMysql className="w-4 h-4 text-[#00758F]" /> },
         { name: "HTML", icon: <FaHtml5 className="w-4 h-4 text-[#E34F26]" /> }, // Fixed
         { name: "CSS", icon: <FaCss3Alt className="w-4 h-4 text-[#1572B6]" /> }, // Fixed
         { name: "JavaScript", icon: <FaJs className="w-4 h-4 text-[#F7DF1E]" /> }, // Fixed
@@ -121,7 +121,7 @@ const SkillsSection = () => {
       skills: [
         { name: "GitHub", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
         { name: "VS Code", icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" /> },
-        { name: "MicrosoftExcel", icon: <FaFileExcel className="w-4 h-4 text-[#217346]" /> },
+        { name: "Excel", icon: <FaFileExcel className="w-4 h-4 text-[#217346]" /> },
         { name: "Jupyter Notebook", icon: <SiJupyter className="w-4 h-4 text-[#F37626]" /> },
       ],
     },
