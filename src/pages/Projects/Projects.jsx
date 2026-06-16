@@ -1,24 +1,41 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import project1Img from "@/assets/images/delinquency.jpg"; // Check your file name!
-import project2Img from "@/assets/images/chatbot.jpg";     // Check your file name!
-
+import project4Img from "@/assets/images/delinquency.jpg"; // Check your file name!
+import project1Img from "@/assets/images/chatbot.jpg";     // Check your file name!
+import project2Img from "@/assets/images/Debtiq.jpeg";
+import project3Img from "@/assets/images/Rag.jpeg";
 const projects = [
    {
     title: "Gen AI Health Assistant",
     description: "This project implements a Generative AI-powered medical diagnosis assistant tailored for rural healthcare centers and primary health clinics in India. It empowers healthcare workers and doctors to diagnose common diseases by analyzing patient symptoms, medical history, and vital signs, supporting multilingual interaction and offline usage in low-connectivity environments.",
-    img: project2Img,
+    img: project1Img,
     color: "rgb(85, 98, 214)",
-    github: "https://github.com/Shankar007-pro/genai-health-assistant",
+    github: "https://github.com/Shankar2027/genai-health-assistant",
     live: "https://shankar0747-aarogya-ai-v2.hf.space/",
+  },
+  {
+    title: "DebtIQ",
+    description: "DebtIQ is an automated technical debt remediation platform built to turn invisible codebase issues into clear, actionable dashboards. It connects directly to public GitHub repositories, processes the entire file tree concurrently via async pipelines, and uses a customized Groq-powered LLM engine to produce structured code health audits. The system generates an objective 0–100 health score mapped across severity levels (HEALTHY to CRITICAL) while serving security findings and detailed refactoring recommendations, persisting all data to PostgreSQL for historical trend tracking.",
+    img: project2Img,
+    color: "rgb(208, 127, 15)",
+    github: "https://github.com/Shankar2027/Debtiq",
+    live: "https://shankar0747-debtiq-ai.hf.space/",
+  },
+  {
+    title: "RAG_Forge",
+    description: "RAG Forge: Enterprise Knowledge Engine A full-stack Retrieval-Augmented Generation (RAG) platform designed to eliminate AI hallucinations. Built with a two-stage Hybrid Retrieval Pipeline (BM25 + Dense Vectors) and MS-MARCO Cross-Encoder re-ranking, the system ensures LLM answers are strictly grounded in private documents. Features include a React/Vite frontend, a FastAPI backend, ChromaDB vector storage, and a custom telemetry dashboard for real-time observability.",
+    img: project3Img,
+    color: "rgb(34, 173, 39)",
+    github: "https://github.com/Shankar2027/RAG-Forge-Enterprise-Retrieval-AI-with-intelligent-Re-Ranking",
+    live: "https://shankar0747-rag-forge.hf.space",
   },
   {
     title: " Deliquency Prediction",
     description: "Financial institutions face significant losses due to loan defaults. This project focuses on building a robust Data Analytics & Machine Learning Pipeline to predict customer delinquency (failure to pay). The goal was to transform raw, inconsistent financial data into actionable insights and high-quality features for predictive modeling.",
-    img: project1Img,
-    color: "#38b718ff",
-    github: "https://github.com/Shankar007-pro/Deliquency-Prediction",
+    img: project4Img,
+    color: "rgb(217, 45, 163)",
+    github: "https://github.com/Shankar2027/Deliquency-Prediction",
     live: "",
   },
  

@@ -131,7 +131,7 @@ export default function Contact() {
                   {
                     icon: <Github className="w-6 h-6 text-gray-400" />,
                     title: "GitHub",
-                    content: "https://github.com/Shankar007-pro",
+                    content: "https://github.com/Shankar2027",
                     link: true,
                   },
                   {

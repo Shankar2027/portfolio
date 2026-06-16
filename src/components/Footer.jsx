@@ -6,7 +6,7 @@ import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 const Footer = () => (
   <footer className="relative z-10 mt-20 border-t border-gray-700/30 pt-10 text-center">
     <div className="flex justify-center space-x-6 text-gray-400 text-2xl">
-      <a href="https://github.com/Shankar007-pro"
+      <a href="https://github.com/Shankar2027"
          target="_blank"
          rel="noopener noreferrer"
          className="hover:text-teal-400 transition"><FaGithub /></a>

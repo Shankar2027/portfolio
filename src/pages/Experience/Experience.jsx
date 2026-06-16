@@ -79,7 +79,7 @@ const ExperienceSection = () => {
       icon: Layers,
       title: "Agentic Ai Intern",
       company: "Innomatics Research Labs",
-      period: "FEB - APR 2026",
+      period: "FEB - MAY 2026",
       description:
         "Agentic AI Intern | Innomatics Research Labs.Developing AI solutions using Python, FastAPI, and AWS.Building advanced workflows with LangChain and LangGraph for Agentic AI applications."
     },
