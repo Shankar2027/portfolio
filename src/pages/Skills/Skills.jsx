@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import IconCloudDemo from "@/components/globe";
 import { Code2, Paintbrush, Database, Layout, Cpu, Cloud } from "lucide-react";
 
-// Importing necessary icons from react-icons
+// Importing necessary icons from react-icons (FaLinux successfully added)
 import { 
   FaBrain, 
   FaHeadphones, 
@@ -33,7 +33,8 @@ import {
   FaLaptopCode,  
   FaGamepad,     
   FaPuzzlePiece,
-  FaProjectDiagram
+  FaProjectDiagram,
+  FaLinux 
 } from "react-icons/fa";
 
 import { MdSportsTennis, MdAnimation } from "react-icons/md";
