@@ -4,47 +4,40 @@ import { Badge } from "@/components/ui/badge";
 import IconCloudDemo from "@/components/globe";
 import { Code2, Paintbrush, Database, Layout, Cpu, Cloud } from "lucide-react";
 
-// Importing all necessary icons from react-icons
+// Importing necessary icons from react-icons
 import { 
   FaBrain, 
   FaHeadphones, 
-  FaWrench, 
   FaHandsHelping, 
   FaPlane, 
-  FaPenNib, 
-  FaCameraRetro,
   FaJava,      
   FaPython,
   FaGitAlt,
-  FaReact,
-  FaNodeJs,
-  FaLinux,
-  FaAws,
   FaFileExcel,
-  FaHtml5,       // Added for HTML
-  FaCss3Alt,     // Added for CSS
-  FaJs,          // Added for JavaScript
-  FaChartLine,   // Added for Matplotlib
-  FaChartArea,   // Added for Seaborn
-  FaCubes,       // Added for OOPs
-  FaNetworkWired,// Added for Networks
-  FaDatabase,    // Added for DBMS
-  FaFire,        // Added for Motivation
-  FaUsers,       // Added for Teamwork
-  FaSync,        // Added for Adaptability
-  FaClock,       // Added for Time Management
-  FaFlag,        // Added for Leadership
+  FaHtml5,       
+  FaCss3Alt,     
+  FaJs,          
+  FaChartLine,   
+  FaChartArea,   
+  FaCubes,       
+  FaNetworkWired,
+  FaDatabase,    
+  FaFire,        
+  FaUsers,       
+  FaSync,        
+  FaClock,       
+  FaFlag,        
   FaBullseye,    
   FaLightbulb,   
   FaSearch,      
   FaLaptopCode,  
   FaGamepad,     
   FaPuzzlePiece,
-  FaProjectDiagram // Added for DSA
+  FaProjectDiagram
 } from "react-icons/fa";
 
-import { MdLiveTv, MdSportsTennis, MdAnimation } from "react-icons/md";
-import { GiChessKnight, GiArtificialIntelligence } from "react-icons/gi";
+import { MdSportsTennis, MdAnimation } from "react-icons/md";
+import { GiArtificialIntelligence, GiMeshNetwork } from "react-icons/gi";
 
 import {
   SiNextdotjs,
@@ -52,27 +45,20 @@ import {
   SiTailwindcss,
   SiPostgresql,
   SiMongodb,
-  SiGraphql,
-  SiJest,
-  SiWebpack,
-  SiRedux,
-  SiFirebase,
-  SiVercel,
-  SiVite,
   SiMysql,
   SiPandas,         
   SiNumpy,          
   SiJupyter,        
   SiScikitlearn,    
+  SiFastapi,
+  SiLangchain
 } from "react-icons/si";
 
 import { TbBrandVscode } from "react-icons/tb";
-import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
-import { FcWorkflow } from "react-icons/fc";
 
 const SkillCard = ({ icon: Icon, title, skills, color }) => (
   <Card className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
-    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
+    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer pointer-events-none"></div>
     <CardContent className="p-6 relative z-10">
       <div className="flex items-center gap-4 mb-6">
         <div className={`p-3 rounded-xl bg-gray-800/50 ${color} group-hover:scale-110 transition-transform duration-300`}>
@@ -108,10 +94,10 @@ const SkillsSection = () => {
       color: "text-blue-400",
       skills: [
         { name: "Python", icon: <FaPython className="w-4 h-4 text-[#3776AB]" /> },
-        { name: "SQL", icon: <SiMysql className="w-4 h-4 text-[#00758F]" /> },
-        { name: "HTML", icon: <FaHtml5 className="w-4 h-4 text-[#E34F26]" /> }, // Fixed
-        { name: "CSS", icon: <FaCss3Alt className="w-4 h-4 text-[#1572B6]" /> }, // Fixed
-        { name: "JavaScript", icon: <FaJs className="w-4 h-4 text-[#F7DF1E]" /> }, // Fixed
+        { name: "SQL / MySQL", icon: <SiMysql className="w-4 h-4 text-[#00758F]" /> },
+        { name: "JavaScript", icon: <FaJs className="w-4 h-4 text-[#F7DF1E]" /> }, 
+        { name: "HTML5", icon: <FaHtml5 className="w-4 h-4 text-[#E34F26]" /> }, 
+        { name: "CSS3", icon: <FaCss3Alt className="w-4 h-4 text-[#1572B6]" /> }, 
       ],
     },
     {
@@ -121,79 +107,79 @@ const SkillsSection = () => {
       skills: [
         { name: "GitHub", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
         { name: "VS Code", icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" /> },
-        { name: "Excel", icon: <FaFileExcel className="w-4 h-4 text-[#217346]" /> },
-        { name: "Jupyter Notebook", icon: <SiJupyter className="w-4 h-4 text-[#F37626]" /> },
+        { name: "Excel Mastery", icon: <FaFileExcel className="w-4 h-4 text-[#217346]" /> },
+        { name: "Jupyter Environments", icon: <SiJupyter className="w-4 h-4 text-[#F37626]" /> },
       ],
     },
     {
       icon: Cloud,
-      title: "Techstacks / Frameworks",
+      title: "AI Ecosystem & Architectures",
       color: "text-purple-400",
       skills: [
-        { name: "Artificial Intelligence", icon: <FaBrain className="w-4 h-4 text-purple-500" /> },
-        { name: "Generative AI", icon: <GiArtificialIntelligence className="w-4 h-4 text-pink-500" /> }, 
-        { name: "Machine Learning", icon: <SiScikitlearn className="w-4 h-4 text-orange-500" /> },
-        { name: "Pandas", icon: <SiPandas className="w-4 h-4 text-[#150458]" /> },
-        { name: "Numpy", icon: <SiNumpy className="w-4 h-4 text-[#013243]" /> },
-        { name: "Matplotlib", icon: <FaChartLine className="w-4 h-4 text-[#11557c]" /> }, // Fixed
-        { name: "Seaborn", icon: <FaChartArea className="w-4 h-4 text-[#11557c]" /> },   // Fixed
+        { name: "Agentic AI / Workflows", icon: <GiMeshNetwork className="w-4 h-4 text-purple-400" /> },
+        { name: "LangChain Framework", icon: <SiLangchain className="w-4 h-4 text-[#13C6B1]" /> },
+        { name: "Generative AI Systems", icon: <GiArtificialIntelligence className="w-4 h-4 text-pink-500" /> }, 
+        { name: "Machine Learning models", icon: <SiScikitlearn className="w-4 h-4 text-orange-500" /> },
+        { name: "FastAPI Development", icon: <SiFastapi className="w-4 h-4 text-[#009688]" /> },
+        { name: "Pandas DataFrames", icon: <SiPandas className="w-4 h-4 text-[#150458]" /> },
+        { name: "Numpy Matrices", icon: <SiNumpy className="w-4 h-4 text-[#013243]" /> },
+        { name: "Matplotlib Plots", icon: <FaChartLine className="w-4 h-4 text-[#11557c]" /> }, 
+        { name: "Seaborn Graphics", icon: <FaChartArea className="w-4 h-4 text-[#38808A]" /> },   
       ],
     },
     {
       icon: Cpu,
-      title: "Core Subjects",
+      title: "Core Computer Science",
       color: "text-yellow-400",
       skills: [
-        { name: "DSA", icon: <FaProjectDiagram className="w-4 h-4 text-[#7C4DFF]" /> }, // Fixed
-        { name: "OOPs", icon: <FaCubes className="w-4 h-4 text-blue-400" /> }, // Fixed
-        { name: "DBMS", icon: <FaDatabase className="w-4 h-4 text-green-400" /> }, // Fixed
-        { name: "Computer Networks", icon: <FaNetworkWired className="w-4 h-4 text-orange-400" /> }, // Fixed
+        { name: "Data Structures & Algos", icon: <FaProjectDiagram className="w-4 h-4 text-[#7C4DFF]" /> }, 
+        { name: "Object-Oriented Programming", icon: <FaCubes className="w-4 h-4 text-blue-400" /> }, 
+        { name: "Database Systems (DBMS)", icon: <FaDatabase className="w-4 h-4 text-green-400" /> }, 
+        { name: "Computer Networks", icon: <FaNetworkWired className="w-4 h-4 text-orange-400" /> }, 
         { name: "Operating Systems", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
       ],
     },
     {
       icon: Paintbrush,
-      title: "Interpersonal Skills",
+      title: "Interpersonal Engineering",
       color: "text-pink-400",
       skills: [
-        { name: "Self Motivation", icon: <FaFire className="w-4 h-4 text-orange-500" /> }, // Fixed
-        { name: "Teamwork", icon: <FaUsers className="w-4 h-4 text-blue-400" /> }, // Fixed
-        { name: "Problem Solving", icon: <FaLightbulb className="w-4 h-4 text-yellow-400" /> }, // Fixed
-        { name: "Adaptability", icon: <FaSync className="w-4 h-4 text-green-400" /> }, // Fixed
-        { name: "Time Management", icon: <FaClock className="w-4 h-4 text-purple-400" /> }, // Fixed
-        { name: "Critical Thinking", icon: <FaBrain className="w-4 h-4 text-pink-500" /> }, // Fixed
-        { name: "Leadership", icon: <FaFlag className="w-4 h-4 text-red-500" /> }, // Fixed
+        { name: "Self Motivation", icon: <FaFire className="w-4 h-4 text-orange-500" /> }, 
+        { name: "Team Synergy", icon: <FaUsers className="w-4 h-4 text-blue-400" /> }, 
+        { name: "Algorithmic Resolution", icon: <FaLightbulb className="w-4 h-4 text-yellow-400" /> }, 
+        { name: "Dynamic Adaptability", icon: <FaSync className="w-4 h-4 text-green-400" /> }, 
+        { name: "Sprint Management", icon: <FaClock className="w-4 h-4 text-purple-400" /> }, 
+        { name: "Critical Analysis", icon: <FaBrain className="w-4 h-4 text-pink-500" /> }, 
+        { name: "Technical Leadership", icon: <FaFlag className="w-4 h-4 text-red-500" /> }, 
       ],
     },
     {
       icon: MdAnimation,
-      title: "Hobbies & Interests",
+      title: "Interests & Pursuits",
       color: "text-indigo-400",
       skills: [
-        { name: "Focus & Patience", icon: <FaBullseye className="w-4 h-4 text-cyan-400" /> },
-        { name: "Problem Solving", icon: <FaPuzzlePiece className="w-4 h-4 text-yellow-400" /> },
-        { name: "Listening to Music", icon: <FaHeadphones className="w-4 h-4 text-pink-300" /> },
-        { name: "Exploring New Tech", icon: <FaSearch className="w-4 h-4 text-blue-300" /> },
-        { name: "Logic Puzzles", icon: <FaPuzzlePiece className="w-4 h-4 text-amber-400" /> },
-        { name: "Hackathons", icon: <FaLaptopCode className="w-4 h-4 text-orange-400" /> },
-        { name: "Helping Others", icon: <FaHandsHelping className="w-4 h-4 text-indigo-300" /> },
-        { name: "Carrom", icon: <FaGamepad className="w-4 h-4 text-gray-300" /> },
-        { name: "Badminton", icon: <MdSportsTennis className="w-4 h-4 text-lime-400" /> },
-        { name: "Traveling", icon: <FaPlane className="w-4 h-4 text-teal-400" /> },
-        
-
+        { name: "Focus & Execution", icon: <FaBullseye className="w-4 h-4 text-cyan-400" /> },
+        { name: "Logic Puzzles & Strategy", icon: <FaPuzzlePiece className="w-4 h-4 text-yellow-400" /> },
+        { name: "Acoustic Engagement", icon: <FaHeadphones className="w-4 h-4 text-pink-300" /> },
+        { name: "Researching Horizons", icon: <FaSearch className="w-4 h-4 text-blue-300" /> },
+        { name: "Hackathon Assembly", icon: <FaLaptopCode className="w-4 h-4 text-orange-400" /> },
+        { name: "Altruistic Mentorship", icon: <FaHandsHelping className="w-4 h-4 text-indigo-300" /> },
+        { name: "Strategic Badminton", icon: <MdSportsTennis className="w-4 h-4 text-lime-400" /> },
+        { name: "Expeditions", icon: <FaPlane className="w-4 h-4 text-teal-400" /> },
       ],
     },
   ];
 
   return (
-    <main className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative">
-      {/* Grid Background */}
+    <main className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative overflow-hidden">
+      {/* Structural Ambient Grid Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+      
       <section className="container mx-auto px-4 py-11 relative z-10">
-        <div className="flex justify-center items-center ">
+        <div className="flex justify-center items-center mb-12">
           <IconCloudDemo />
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <SkillCard
@@ -206,30 +192,28 @@ const SkillsSection = () => {
           ))}
         </div>
       </section>
-      <style jsx>{`
+
+      {/* Global Embedded Animations */}
+      <style jsx global>{`
         @keyframes shimmer {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
         }
         .animate-shimmer {
-          animation: shimmer 2s infinite;
+          animation: shimmer 2.5s infinite linear;
         }
         .bg-grid-pattern {
           background-image: linear-gradient(
               to right,
-              rgba(100, 100, 255, 0.1) 1px,
+              rgba(100, 100, 255, 0.08) 1px,
               transparent 1px
             ),
             linear-gradient(
               to bottom,
-              rgba(100, 100, 255, 0.1) 1px,
+              rgba(100, 100, 255, 0.08) 1px,
               transparent 1px
             );
-          background-size: 30px 30px;
+          background-size: 40px 40px;
         }
       `}</style>
     </main>
