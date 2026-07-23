@@ -85,6 +85,14 @@ const ExperienceSection = () => {
     },
     {
       icon: Network,
+      title: "Campus Mantri (Student Ambassador)",
+      company: "GeeksforGeeks",
+      period: "JUN - DEC 2026",
+      description:
+        "Official GeeksforGeeks student ambassador driving technical awareness on campus by connecting aspiring developers with industry-standard tech and upskilling resources.",
+    },
+    {
+      icon: Network,
       title: "DATA ANALYST",
       company: "Apex Planet Pvt Ltd",
       period: "JAN - MAR 2026",
