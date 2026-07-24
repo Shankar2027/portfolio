@@ -33,7 +33,7 @@ export default function About() {
             {/* Text Section */}
             <div className="relative space-y-4">
               <p className="text-white">
-                👨‍💻 <strong>Agentic AI Intern</strong> | 📊 <strong>Data Analyst</strong> | 🎓 <strong>B.Tech 3rd Year at SVCET</strong>
+                👨‍💻 <strong>Agentic AI Intern</strong> | 📊 <strong>Data Analyst</strong> | 🎓 <strong>B.Tech Final Year Student at SVCET</strong>
               </p>
               <p className="text-white">
                 Hi, I’m <strong>Shankar Reddy</strong>, a computer science student specializing in <strong>AI & ML</strong>. I am driven by the potential of intelligent systems to solve complex, real-world problems.
