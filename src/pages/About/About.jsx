@@ -1,4 +1,4 @@
-import HeroImg from "@/assets/images/Shankar.jpeg";
+import HeroImg from "@/assets/images/shankar0747.jpeg";
 import Footer from "@/components/Footer";
 import Skills from "@/pages/Skills/Skills";
 import React from "react";
